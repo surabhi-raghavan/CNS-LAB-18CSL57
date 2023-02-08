@@ -14,17 +14,17 @@ public class tcpserver {
             Socket sock = sersock.accept(); 
 
             System.out.println("Connection Established\nWaiting for Client Request.");
-            InputStream istream = sock.getInputStream( );
+            InputStream ip = sock.getInputStream( );
 
-            BufferedReader br =new BufferedReader(new InputStreamReader(istream));
+            BufferedReader br =new BufferedReader(new InputStreamReader(ip));
             String fname = br.readLine();
             if(fname.equals("exit"))
              continue;
             
             BufferedReader contentRead = new BufferedReader(new FileReader(fname));
-            OutputStream ostream = sock.getOutputStream( );
+            OutputStream op = sock.getOutputStream( );
 
-            PrintWriter pwrite = new PrintWriter(ostream, true);
+            PrintWriter pwrite = new PrintWriter(op, true);
             String str;
 
             while((str = contentRead.readLine()) != null) 

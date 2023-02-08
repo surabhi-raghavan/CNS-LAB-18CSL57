@@ -1,7 +1,6 @@
 package prg10;
 import java.io.*;
 import java.net.*;
-
 public class udpserver 
 {
     public static DatagramSocket serversocket;

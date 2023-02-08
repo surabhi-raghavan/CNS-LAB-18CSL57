@@ -43,7 +43,7 @@ public class prg7 {
         for(int i=0;i<len;i++)
             a[i]^=b[i]; 
         
-        System.out.println("DATA SENT");
+        System.out.println("DATA SENT: ");
         for(int i=0;i<len;i++)
             System.out.print(a[i]+ " ");
         System.out.println();
